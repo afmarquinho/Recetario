@@ -127,3 +127,12 @@ img {
     width: 100vw;
   }
 }
+
+/* INICIO PAGINA SEARCH */
+.input-name{
+  background-image: url(../assets/images/SOPA\ DE\ AJO\ TRADICIONAL.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* FINPAGINA SEARCH */
