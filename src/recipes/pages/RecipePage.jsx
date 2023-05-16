@@ -20,17 +20,17 @@ import {
 import { useMemo } from "react";
 
 const RecipePage = () => {
-  const video = (
-    <iframe
-      width="100%"
-      height="315"
-      src="https://www.youtube.com/embed/H3sIVa5VWk8"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-    ></iframe>
-  );
+  // const video = (
+  //   <iframe
+  //     width="100%"
+  //     height="315"
+  //     src="https://www.youtube.com/embed/H3sIVa5VWk8"
+  //     title="YouTube video player"
+  //     frameborder="0"
+  //     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  //     allowfullscreen
+  //   ></iframe>
+  // );
   const { name } = useParams();
   const recipe = useMemo (()=> getRecipeByName(name), [name]);
   if (!recipe) {
@@ -75,7 +75,7 @@ const RecipePage = () => {
       </Container>
       <hr />
       <Container2>
-        <Video>{video}</Video>
+        <Video>Video aquí</Video>
         <Instrucciones>
           <Ingredientes>
             <p>Ingredientes</p>

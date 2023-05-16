@@ -32,4 +32,12 @@ export const Filters = styled.div`
 export const H3 = styled.h3`
   margin: 0;
   font-size: 2.5rem;
+  margin:0;
 `;
+export const P2 = styled.p`
+color: red;
+font-weight: 800;
+margin:0`
+
+export const P3 = styled.p`
+font-weight: 800;`
