@@ -1,8 +1,12 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { Button } from "./style/navBar.Styled";
 import { useState } from "react";
+import { useContext } from "react";
+import AuthContext from "../../auth/context/AuthContext";
 
 const NavBar = () => {
+  const { name, logout } = useContext(AuthContext);
+
   const [navActive, setNavActive] = useState(false);
   const onActiveMenu = () => {
     if (navActive) {
@@ -10,7 +14,6 @@ const NavBar = () => {
     } else {
       setNavActive(true);
     }
-    console.log(navActive);
   };
   const onInactiveMenu = () => {
     if (navActive) {
@@ -19,6 +22,7 @@ const NavBar = () => {
   };
   const navigate = useNavigate();
   const onLogout = () => {
+    logout();
     navigate("/login", { replace: true });
   };
 
@@ -131,7 +135,10 @@ const NavBar = () => {
               fill="#FF4C4C"
             />
           </svg>
-          <p className={navActive ? "navActive2" : "inactive2"}>User</p>
+          <p className={navActive ? "navActive2" : "inactive2"}>
+            {" "}
+            {name?.name}{" "}
+          </p>
         </div>
         <Button
           type="button"
