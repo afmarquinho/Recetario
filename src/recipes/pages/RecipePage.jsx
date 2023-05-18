@@ -7,7 +7,10 @@ import {
   H2,
   P,
   Span,
-  Button,
+  ButtonBack,
+  DivButton,
+  ButtonAdd,
+  ButtonDelete,
   P1,
   Container2,
   Instrucciones,
@@ -17,35 +20,33 @@ import {
   Ol,
   Video,
 } from "../helpers/recipePage.style";
-import { useMemo } from "react";
+import { useContext, useMemo } from "react";
+import ListContext from "../context/ListContext";
 
 const RecipePage = () => {
-  // const video = (
-  //   <iframe
-  //     width="100%"
-  //     height="315"
-  //     src="https://www.youtube.com/embed/H3sIVa5VWk8"
-  //     title="YouTube video player"
-  //     frameborder="0"
-  //     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  //     allowfullscreen
-  //   ></iframe>
-  // );
   const { name } = useParams();
-  const recipe = useMemo (()=> getRecipeByName(name), [name]);
+  const { addFav, removeFav } = useContext(ListContext);
+
+  const recipe = useMemo(() => getRecipeByName(name), [name]);
+  // const {id, time, type, url} = recipe //la variable name la tomo del param, ya no es necesario desesctructurarla
   if (!recipe) {
     return <Navigate to="home" />;
   }
-  
   const back = useNavigate();
-
   const onNavigateBack = () => {
     back(-1);
   };
+  const onAdd = () => {
+    addFav(recipe);
+  };
+  const onRemove =()=>{
+    removeFav(recipe.id)
+
+  }
   return (
     <>
       <Container>
-        <Img src={ `/assets/images/${recipe.name}.jpg`} alt={recipe.name}></Img>
+        <Img src={`/assets/images/${recipe.name}.jpg`} alt={recipe.name}></Img>
         <Info>
           <H2>{recipe.name}</H2>
           <P>
@@ -64,7 +65,13 @@ const RecipePage = () => {
           <P>
             Dificultad: <Span>{recipe.type[2]}</Span>
           </P>
-          <Button onClick={onNavigateBack}>Back</Button>
+          <ButtonBack onClick={onNavigateBack}>Atrás</ButtonBack>
+
+          <DivButton>
+            <ButtonAdd onClick={onAdd}>Agregar a Favoritos</ButtonAdd>
+            <ButtonDelete onClick={onRemove}>Eliminar favoritos</ButtonDelete>
+          </DivButton>
+
           <P1>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id commodi
             veniam dolor debitis et fugiat? Error, deserunt cupiditate? Nihil

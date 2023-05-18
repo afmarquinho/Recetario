@@ -26,13 +26,12 @@ export const P = styled.p`
   font-weight: 900;
   line-height: 16px;
 `;
-export const Button = styled.button`
-  background-color: rgb(219, 204, 204);
+
+export const P1 = styled.p`
+  background-color: white;
   position: absolute;
-  border: none;
   top: 0;
-  right: 0;
-  &:hover {
-    cursor: pointer;
-  }
+  font-size: 1rem;
+  font-weight:900;
+  padding:0.2rem;
 `;

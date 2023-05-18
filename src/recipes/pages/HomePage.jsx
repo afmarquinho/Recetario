@@ -1,15 +1,13 @@
-import React from 'react'
-import { data } from '../../data/data'
-import RecipeList from '../components/RecipeList'
+import React from "react";
 
+import RecipeList from "../components/RecipeList";
 
 const HomePage = () => {
-
   return (
     <div>
-      <RecipeList type = "sopa"/>
+      <RecipeList type="arroz" />
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
