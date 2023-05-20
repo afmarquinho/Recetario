@@ -1,19 +1,17 @@
 import styled from "@emotion/styled";
 
-
 export const SlideMain = styled.div`
   width: 100%;
   margin: 0 auto 2rem auto;
   overflow: hidden;
   background-color: yellow;
-
-`
+`;
 export const SlideContainer = styled.div`
-position: relative;
+  position: relative;
 `;
 export const ContenedorSlideShow = styled.div`
-display: flex;
-flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 `;
 
 export const Slide = styled.div`
@@ -50,7 +48,7 @@ export const Slide = styled.div`
     margin: 0;
   }
   .info-contenedor {
-    background-color: rgba(0, 0, 0, 0.295);
+    background-color: #FA7E4B;
     color: white;
     font-weight: 900;
     width: 100%;
@@ -58,7 +56,7 @@ export const Slide = styled.div`
     margin: 0;
     text-align: center;
     position: absolute;
-    top: 0;
+    bottom: 0;
     @media (max-width: 769px) {
       position: relative;
       font-size: 2rem;

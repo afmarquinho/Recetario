@@ -58,35 +58,35 @@ const Slideshow = () => {
           <Slide className="slide">
             <div className="imagen imagen1"></div>
             <div className="info-contenedor">
-              <p>Descripcion de la imagen</p>
+              <p>Cocina como un experto</p>
             </div>
           </Slide>
 
           <Slide className="slide">
             <div className="imagen imagen2"></div>
             <div className="info-contenedor">
-              <p>Descripcion de la imagen</p>
+              <p>Recetas fáciles de preparar</p>
             </div>
           </Slide>
 
           <Slide className="slide">
             <div className="imagen imagen3"></div>
             <div className="info-contenedor">
-              <p>Descripcion de la imagen</p>
+              <p>Lo mejor de la cocina Latina</p>
             </div>
           </Slide>
 
           <Slide className="slide">
             <div className="imagen imagen4"></div>
             <div className="info-contenedor">
-              <p>Descripcion de la imagen</p>
+              <p>Escucha nuestros Podcasts</p>
             </div>
           </Slide>
 
           <Slide className="slide">
             <div className="imagen imagen5"></div>
             <div className="info-contenedor">
-              <p>Descripcion de la imagen</p>
+              <p>Manos a la obra!!!</p>
             </div>
           </Slide>
         </ContenedorSlideShow>

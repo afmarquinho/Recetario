@@ -5,17 +5,31 @@ import RecipeCard from "./RecipeCard";
 import { useMemo } from "react";
 import { data } from "../../data/data";
 
-const Div = styled.div``;
+const Div = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 2rem;
+  width: 100rem;
+`;
+const DivContainer = styled.div`
+display: flex;
+justify-content:center;
+align-items: center;
+margin: 0 auto;
+padding: auto;`
 
 const RecipeList = ({ type = "" }) => {
   if (type === "") {
     const dataFilter = data;
     return (
-      <Div>
-        {dataFilter.map((db) => (
-          <RecipeCard key={Key()} {...db} />
-        ))}
-      </Div>
+      <DivContainer>
+        <Div>
+          {dataFilter.map((db) => (
+            <RecipeCard key={Key()} {...db} />
+          ))}
+        </Div>
+      </DivContainer>
     );
   }
   const dataFilter = useMemo(() => getRecipesByType(type), [type]);
@@ -23,11 +37,13 @@ const RecipeList = ({ type = "" }) => {
     return <p>{dataFilter}</p>;
   }
   return (
-    <Div>
-      {dataFilter.map((db) => (
-        <RecipeCard key={Key()} {...db} />
-      ))}
-    </Div>
+    <DivContainer>
+      <Div className="cardContainer">
+        {dataFilter.map((db) => (
+          <RecipeCard key={Key()} {...db} />
+        ))}
+      </Div>
+    </DivContainer>
   );
 };
 
