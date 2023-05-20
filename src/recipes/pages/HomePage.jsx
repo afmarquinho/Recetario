@@ -4,9 +4,8 @@ import RecipeList from "../components/RecipeList";
 const HomePage = () => {
   return (
     <div>
-      <div className="slide-main">
-        <SlideShow></SlideShow>
-      </div>
+      <SlideShow></SlideShow>
+
       <RecipeList type="arroz" />
     </div>
   );

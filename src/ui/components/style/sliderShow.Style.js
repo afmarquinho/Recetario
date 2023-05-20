@@ -1,4 +1,13 @@
 import styled from "@emotion/styled";
+
+
+export const SlideMain = styled.div`
+  width: 100%;
+  margin: 0 auto 2rem auto;
+  overflow: hidden;
+  background-color: yellow;
+
+`
 export const SlideContainer = styled.div`
 position: relative;
 `;
