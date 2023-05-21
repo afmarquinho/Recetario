@@ -22,6 +22,7 @@ import {
 } from "../helpers/recipePage.style";
 import { useContext, useMemo } from "react";
 import ListContext from "../context/ListContext";
+import Youtube from "../components/Youtube";
 
 const RecipePage = () => {
   const { name } = useParams();
@@ -39,10 +40,12 @@ const RecipePage = () => {
   const onAdd = () => {
     addFav(recipe);
   };
-  const onRemove =()=>{
-    removeFav(recipe.id)
+  const onRemove = () => {
+    removeFav(recipe.id);
+  };
+  const urlId = recipe.url;
+  console.log(urlId);
 
-  }
   return (
     <>
       <Container>
@@ -82,7 +85,9 @@ const RecipePage = () => {
       </Container>
       <hr />
       <Container2>
-        <Video>Video aquí</Video>
+        <Video>
+          <Youtube videoId={urlId}> </Youtube>
+        </Video>
         <Instrucciones>
           <Ingredientes>
             <p>Ingredientes</p>

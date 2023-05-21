@@ -59,7 +59,7 @@ export const DivButton = styled.div`
 `;
 
 export const ButtonAdd = styled.button`
-  background-color: #FF4D00;
+  background-color: #ff4d00;
   color: white;
   font-size: 1rem;
   font-weight: 900;
@@ -70,11 +70,11 @@ export const ButtonAdd = styled.button`
   transition: all 0.2s ease;
   &:hover {
     cursor: pointer;
-    background-color: #BD0CE8;
+    background-color: #bd0ce8;
   }
 `;
 export const ButtonDelete = styled.button`
-  background-color: #1484FF;
+  background-color: #1484ff;
   color: white;
   font-size: 1rem;
   font-weight: 900;
@@ -85,7 +85,7 @@ export const ButtonDelete = styled.button`
   transition: all 0.2s ease;
   &:hover {
     cursor: pointer;
-    background-color: #E8CB0C;
+    background-color: #e8cb0c;
   }
 `;
 export const P1 = styled.p`
@@ -107,4 +107,11 @@ export const Ol = styled.ol`
 `;
 export const Video = styled.div`
   width: 50%;
+  height: 100%;
+  iframe,
+  object,
+  embed {
+    width: 100%;
+   
+  }
 `;
