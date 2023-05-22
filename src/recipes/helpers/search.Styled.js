@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 
+export const Form = styled.form``;
 export const H2 = styled.h2`
   margin: 0;
   color: #333333;
@@ -32,12 +33,23 @@ export const Filters = styled.div`
 export const H3 = styled.h3`
   margin: 0;
   font-size: 2.5rem;
-  margin:0;
+  margin: 0;
 `;
 export const P2 = styled.p`
-color: red;
-font-weight: 800;
-margin:0`
+  color: red;
+  font-weight: 800;
+  margin: 0;
+`;
 
 export const P3 = styled.p`
-font-weight: 800;`
+  font-weight: 800;
+`;
+
+export const ResultsContainter = styled.div`
+ display: flex;
+ flex-flow: row wrap;
+ justify-content: center;
+ align-items: center;
+ gap: 2rem;
+ 
+`;

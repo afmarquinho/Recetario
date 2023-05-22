@@ -4,7 +4,7 @@ export const CardContainer = styled.div`
   position: relative;
   margin-bottom: 2rem;
   width: 30rem;
-  height: 25rem;
+  height: 28rem;
 `;
 
 export const IMG = styled.img`

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import RecipeCard from "../components/RecipeCard";
 import Key from "../helpers/Key";
-import getHeroesBySearch from "../helpers/getHeroesBySearch";
+import getRecipesBySearch from "../helpers/getRecipesBySearch";
+
 import {
   H2,
   P,
@@ -10,6 +11,8 @@ import {
   DivInputName,
   Filters,
   H3,
+  Form,
+  ResultsContainter,
 } from "../helpers/search.Styled";
 import { useNavigate } from "react-router-dom";
 
@@ -25,12 +28,12 @@ const SearchPage = () => {
     if (inputValue.trim().length < 1) return;
     navigate(`?q=${inputValue.toLowerCase().trim()}`);
   };
-  const recipeFiltered = getHeroesBySearch(inputValue.trim().toLowerCase());
+  const recipeFiltered = getRecipesBySearch(inputValue.trim().toLowerCase());
   return (
     <>
-      <form action="" onSubmit={onformSubmit}>
+      <Form className="formulario" action="" onSubmit={onformSubmit}>
         <DivInputName className="input-name">
-          <H2>Search</H2>
+          <H2>Buscar</H2>
           <InputName
             type="text"
             name="name"
@@ -41,7 +44,7 @@ const SearchPage = () => {
             autoComplete="off"
           />
         </DivInputName>
-        <P>Filtrar por...</P>
+        {/* <P>Filtrar por...</P>
         <Filters>
           <div>
             <label htmlFor="type">Tipo de Plato </label>
@@ -94,17 +97,17 @@ const SearchPage = () => {
               <option value="51"> más 50 </option>
             </select>
           </div>
-        </Filters>
-      </form>
+        </Filters> */}
+      </Form>
       <hr />
       <H3>Results</H3>
-      <div>
+      <ResultsContainter>
         {recipeFiltered.length < 1 ? (
           <P2>No hay resutados que coinciden con la busqueda.</P2>
         ) : (
           recipeFiltered.map((recipe) => <RecipeCard key={Key()} {...recipe} />)
         )}
-      </div>
+      </ResultsContainter>
     </>
   );
 };

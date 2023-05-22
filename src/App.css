@@ -53,6 +53,12 @@ img {
   margin: 0 auto;
   width: calc(100vw - 10rem);
 }
+@media (min-width: 768px) {
+    
+    .contenedor{
+      margin: 0 auto 0 8rem;
+    }
+}
 
 /* NAVBAR */
 .parent {
@@ -65,11 +71,13 @@ img {
   background-color: #dbcccc;
   transition: all 0.5s ease-out;
   margin: 0;
-  position: fixed;
+  position: sticky;
   z-index: 100;
 }
 @media (min-width: 768px) {
   .parent {
+    position: fixed;
+    top:0;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
@@ -127,6 +135,7 @@ img {
     width: 100vw;
   }
 }
+/* FIN NAVBAR */
 
 /* INICIO PAGINA SEARCH */
 .input-name{
