@@ -6,7 +6,7 @@ Custom Hooks, Context, Recuder, Styled Component with Emotion,
 
 https://subtle-starlight-45f406.netlify.app
 
-![image](https://github.com/afmarquinho/Recetario/assets/114000603/2d058884-b5e6-4892-a108-4f05a2bc8431)
+![image](https://github.com/afmarquinho/Recetario/assets/114000603/1358b698-de54-41bd-b73b-0acbbd58a368)
 
 ![image](https://github.com/afmarquinho/Recetario/assets/114000603/d0a2fa5b-34b2-4ba6-b619-ffb3f62cb778)
 
