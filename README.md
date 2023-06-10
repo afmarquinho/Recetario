@@ -1,7 +1,7 @@
 # Recetario
 Recetaio de cocina.
 React + Vite +  JSX, React Router Dom v6,
-Custom Hooks, Context, Recuder, Styled Component with Emotion, 
+Custom Hooks, Context, Reducer, Styled Component with Emotion, 
 
 
 https://subtle-starlight-45f406.netlify.app
